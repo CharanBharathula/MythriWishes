@@ -1,0 +1,107 @@
+<!DOCTYPR html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Birthday Gift - To Mythri</title>
+        
+        <!-- Link CSS Style.css file-->
+        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            document.addEventListener("mousemove", function (e) {
+                var body = document.querySelector('body');
+                var heart = document.createElement("p");
+                var x = e.offsetX;
+                var y = e.offsetY;
+                heart.style.left = x + 'px';
+                heart.style.top = y + 'px';
+                var size = Math.random() * 100;
+                heart.style.width = 20 + size + 'px';
+                heart.style.height = 20 + size + 'px';
+                body.appendChild(heart);
+
+                setTimeout(function () {
+                    heart.remove();
+                }, 2000);
+            })
+        </script>
+        <div class='moon'>
+            <div class='crater1'></div>
+            <div class='crater2'></div>
+            <div class='crater3'></div>
+        </div>
+        
+        <canvas id="canvas"></canvas>
+        
+        <div id="sea"></div>
+        <div id="beach"></div>
+        
+        <img src="https://dl.dropbox.com/s/2k0mtrxc2dqurmh/jumping.png" alt="Jumping-people" id="people" />
+        
+        <div id="merrywrap" class="merrywrap">
+            <script>
+                function remove(){
+                    var obj = document.getElementById("merrywrap");
+                    obj.style.backgroundImage = "none";
+                    obj.style.backgroundBlendMode = "multiply";
+                    var image = document.getElementById("person_image");
+                    image.style.opacity = 0.5;
+                }
+            </script>
+            <div class="giftbox" onclick="remove()">
+                <div class="cover">
+                    <div></div>
+                </div>
+                
+                <div class="box"></div>
+            </div>
+            
+            <div class="icons">
+                <div class="row">
+                    <span>H</span>
+                    <span>a</span>
+                    <span>p</span>
+                    <span>p</span>
+                    <span>y</span>
+                    
+                </div>
+                <div class="row">
+                    <span>B</span>
+                    <span>i</span>
+                    <span>r</span>
+                    <span>t</span>
+                    <span>h</span>
+                    <span>d</span>
+                    <span>a</span>
+                    <span>y</span>
+                </div>
+                
+                <div class="row">
+                    <span>C</span>
+                    <span>o</span>
+                    <span>m</span>
+                    <span>r</span>
+                    <span>a</span>
+                    <span>d</span>
+                    <span>e</span><br />
+                    <span>🥳 🥳 🥳 🎂</span>
+
+                </div>
+            </div>
+            
+            <img id="person_image" src="person_image.jpeg">
+            
+        </div>
+        
+        <div id="video">
+
+        </div>
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
